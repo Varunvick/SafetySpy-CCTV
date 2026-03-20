@@ -12,6 +12,9 @@
 html, body { height: 100%; font-family: "Poppins", Arial, sans-serif;
      background: var(--bg); color: var(--text);
      }
+html {
+  scroll-behavior: smooth;
+}
 
 .container { 
     max-width: 1200px;
@@ -29,7 +32,9 @@ html, body { height: 100%; font-family: "Poppins", Arial, sans-serif;
   padding: 12px 20px;
   background: rgba(31,52,66,0.98);
   z-index: 2000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08); background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .logo {
@@ -64,11 +69,23 @@ html, body { height: 100%; font-family: "Poppins", Arial, sans-serif;
   font-size: 15px;
   padding: 6px 8px;
   border-radius: 6px;
+  position: relative;
 }
 
-.nav-link:hover, .nav-link.active { 
-    color: var(--muted);
- }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00C6FF;
+  bottom: -3px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
 
 
 .nav-toggle {
@@ -81,11 +98,24 @@ html, body { height: 100%; font-family: "Poppins", Arial, sans-serif;
 
 
 .hero {
-  padding-top: 110px; 
-  min-height: calc(100vh - 110px);
+  padding-top: 110px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  background: #fff;
+  background: linear-gradient(135deg, #007BFF, #00C6FF);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
 }
 
 .hero-container {
@@ -97,8 +127,10 @@ html, body { height: 100%; font-family: "Poppins", Arial, sans-serif;
 }
 
 .hero-text {
-  flex: 1;
-  min-width: 260px;
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
 }
 
 .hero-text h1 {
@@ -123,15 +155,20 @@ html, body { height: 100%; font-family: "Poppins", Arial, sans-serif;
   border-radius: 10px;
   font-weight: 600;
   transition: transform .18s ease, background .18s ease;
+   background: linear-gradient(135deg,#007BFF,#00C6FF);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .button:hover, .button-link:hover {
      background: var(--accent);
-     transform: translateY(-3px); }
+     transform: translateY(-3px); 
+     transform: translateY(-3px) scale(1.05);
+    }
 
 .hero-image {
   flex: 0 0 420px;
   max-width: 420px;
+  transition: 0.4s;
 }
 
 .hero-image img {
@@ -139,6 +176,16 @@ html, body { height: 100%; font-family: "Poppins", Arial, sans-serif;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.hero-image img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+.wave {
+  height: 100px;
+  background: white;
+  border-top-left-radius: 50% 50px;
+  border-top-right-radius: 50% 50px;
+  margin-top: -50px;
 }
 
 
@@ -322,4 +369,83 @@ html, body { height: 100%; font-family: "Poppins", Arial, sans-serif;
   .card, .services-section .cards { width: 92%; max-width: 520px; }
   .about-grid { grid-template-columns: 1fr; }
   .footer-container { flex-direction: column; text-align: center; }
+}
+
+
+/* 🔥 PREMIUM UI UPGRADE 
+
+:root {
+  --primary: #007BFF;
+  --secondary: #00C6FF;
+} */
+
+/* LOGO FIX */
+.logo {
+  height: 80px;
+  filter: brightness(0) invert(1);
+}
+
+/* NAVBAR GLASS EFFECT */
+.header {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* HERO PREMIUM 
+.hero {
+  background: linear-gradient(135deg,#007BFF,#00C6FF);
+  color: white;
+}
+
+/* CARD EFFECT */
+.card {
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  color: var(--accent);
+}
+
+/* BUTTONS */
+.button, .small-btn, button {
+  background: var(--primary);
+  transition: 0.3s;
+}
+.button:hover, .small-btn:hover, button:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+/* FORM DESIGN */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px;
+  z-index: 999;
 }
