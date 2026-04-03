@@ -245,7 +245,9 @@ html {
      font-weight:600;
      }
 
-
+.about{
+  background-color: #007BFF;
+}
 .about-grid { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -411,7 +413,7 @@ section {
 .card:hover {
   transform: translateY(-12px);
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-  color: var(--accent);
+  color: var(--muted);
 }
 
 /* BUTTONS */
