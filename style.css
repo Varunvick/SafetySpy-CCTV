@@ -318,6 +318,13 @@ html {
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
      }
 
+ #contact {
+  scroll-margin-top: 120px;
+}  
+section {
+  scroll-margin-top: 100px;
+}  
+
 .footer {
      background: #2d3e50; 
      color: #fff; 
