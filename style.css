@@ -411,6 +411,23 @@ section {
   .footer-container { flex-direction: column; text-align: center; }
 }
 
+/* Hide menu in mobile */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background: #0a2540;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+}
+
 
 /* 🔥 PREMIUM UI UPGRADE 
 
