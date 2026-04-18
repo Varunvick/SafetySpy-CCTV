@@ -413,6 +413,9 @@ section {
 
 /* Hide menu in mobile */
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
   .navbar {
     display: none;
     flex-direction: column;

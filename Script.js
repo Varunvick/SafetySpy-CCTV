@@ -3,20 +3,19 @@ window.dataLayer = window.dataLayer || [];
   gtag('js', new Date());
   gtag('config', 'G-YWQT5PBQBS');
 
-  AOS.init({ duration: 600, once: true });
-
   
-    const navToggle = document.getElementById('navToggle');
-    const navbar = document.getElementById('navbar');
-    navToggle.addEventListener('click', () => {
-      navbar.classList.toggle('open');
-    });
+    document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.getElementById("navToggle");
+  const navbar = document.getElementById("navbar");
 
-  
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navbar.classList.contains('open')) navbar.classList.remove('open');
-      });
-    });
+  navToggle.addEventListener("click", function () {
+    navbar.classList.toggle("open");
+  });
 
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      navbar.classList.remove("open");
+    });
+  });
+});
   
