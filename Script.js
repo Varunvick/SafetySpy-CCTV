@@ -9,13 +9,13 @@ window.dataLayer = window.dataLayer || [];
     const navToggle = document.getElementById('navToggle');
     const navbar = document.getElementById('navbar');
     navToggle.addEventListener('click', () => {
-      navbar.classList.toggle('active');
+      navbar.classList.toggle('open');
     });
 
   
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
-        if (navbar.classList.contains('active')) navbar.classList.remove('active');
+        if (navbar.classList.contains('open')) navbar.classList.remove('open');
       });
     });
 
