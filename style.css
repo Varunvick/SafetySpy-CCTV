@@ -423,7 +423,7 @@ section {
     width: 100%;
   }
 
-  .navbar.active {
+  .navbar.open {
     display: flex;
   }
 }
