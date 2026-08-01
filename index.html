@@ -99,7 +99,7 @@
           <img src="icons/installation.png" alt="Security Camera icon" />
           <h3>New Installations</h3>
           <p>Professional CCTV setup with the latest technology, tailored to your security needs..</p>
-          <a class="small-btn" href="#contact"  target="_blank"
+          <a class="small-btn" href="#contact" 
            rel="noopener"
            class="button">Learn More</a>
         </article>
@@ -108,7 +108,7 @@
           <img src="icons/services.png" alt="Fire detection icon" />
           <h3>Services</h3>
           <p>Fast and reliable CCTV repair and maintenance to keep your system running smoothly..</p>
-          <a class="small-btn" href="#contact"  target="_blank"
+          <a class="small-btn" href="#contact" 
            rel="noopener"
            class="button">Learn More</a>
         </article>
@@ -117,12 +117,82 @@
           <img src="icons/amc.png" alt="Smart home icon" />
           <h3>AMC</h3>
           <p>Affordable, hassle-free yearly plans ensuring continuous security and timely support.</p>
-          <a class="small-btn" href="#contact"  target="_blank"
+          <a class="small-btn" href="#contact" 
            rel="noopener"
            class="button">Learn More</a>
       </div>
     </div>
   </section>
+
+  <section>
+    
+<div class="storage-container">
+<h2>CCTV Storage Calculator</h2>
+<label>Camera Type</label>
+<select id="cameratype">
+<option value="IP Cameras">IP Cameras</option>
+<option value="Anolog Cameras">Anolog Cameras</option>
+</select>
+
+<label>Number of Cameras</label>
+<input type="number" id="camera" value="4">
+
+<label>Camera Resolution</label>
+<select id="resolution">
+<option value="2">2 MP</option>
+<option value="4">4 MP</option>
+<option value="5">5 MP</option>
+<option value="8">8 MP</option>
+</select>
+
+<label>Compression</label>
+<select id="compression">
+<option value="0.5">H.265+</option>
+</select>
+
+<label>Recording Type</label>
+<select id="recording">
+<option value="1">24x7 Continuous</option>
+<option value="0.6">Motion Detection</option>
+<option value="0.8">Scheduled Recording</option>
+</select>
+
+<label>Recording Days</label>
+<input type="number" id="days" value="30"><br><br>
+
+<button onclick="calculateStorage()">Calculate Storage</button>
+
+<div class="storage-result" id="result">
+<h3>Estimated Storage</h3>
+<p id="daily"></p>
+<p id="total"></p>
+<p id="hdd"></p>
+</div>
+
+<div class="hero-buttons">
+
+<a onclick="sendWhatsAppQuote()" class="hero-btn"
+onclick="sendWhatsAppQuote()">
+<i class="fa-brands fa-whatsapp"></i>
+Get Quote on WhatsApp
+</a>
+
+<a href="#contact" class="hero-btn">
+Book a FREE Site Visit
+</a>
+
+<a href="tel:+916300195805" class="hero-btn">
+Call Our Expert
+</a>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=kadlevarun@gmail.com" target="_blank" class="hero-btn">
+    <i class="fa-solid fa-envelope"></i>
+    Email Us
+</a>
+
+</div>
+
+ </section>
 
   <section id="about" class="about" data-aos="fade-up">
     <div class="container about-grid">
@@ -187,7 +257,7 @@
       <div class="contact-info">
         <h2>Contact Us</h2>
         <p>Have questions? Reach out — we’ll get back quickly.</p>
-        <p><strong>Email:</strong> <a href="mailto:kadlevarun@gmail.com">kadlevarun@gmail.com</a></p>
+        <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kadlevarun@gmail.com" target="_blank">kadlevarun@gmail.com</a></p>
         <p><strong>Phone:</strong> <a href="tel:+916300195805">+91 6300195805</a></p>
         <p><strong>Address:</strong> Kuntloor, Hayathnagar, Hyderabad, India</p>
 
@@ -241,14 +311,16 @@
 
       <div class="footer-col">
         <h4>Contact</h4>
-        <p>Email: <a href="mailto:kadlevarun@gmail.com">kadlevarun@gmail.com</a></p>
+        <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kadlevarun@gmail.com" target="_blank" >
+    <i class="fa-solid fa-envelope"></i>
+</a></p>
         <p>Phone: <a href="tel:+916300195805">+91 6300195805</a></p>
         <p>Location: Kuntloor, Hayathnagar, Hyderabad, India</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2025 Safetyspy. All Rights Reserved.</p>
+      <p>© 2026 Safetyspy. All Rights Reserved.</p>
     </div>
   </footer>
  

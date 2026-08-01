@@ -273,6 +273,86 @@ html {
      font-weight:600;
      }
 
+
+
+.storage-container{
+    max-width:800px;
+    margin:100px auto;
+    background:#fff;
+    padding:60px;
+    border-radius:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.storage-container h2{
+    text-align:center;
+    color:#0d6efd;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.storage-result{
+    margin-top:25px;
+    background:#eef7ff;
+    padding:20px;
+    border-radius:8px;
+    display:none;
+}
+.storage-result h3{
+    color:#0d6efd;
+}  
+
+#result{
+  display:none;
+}
+
+button[onclick="calculateStorage()"] {
+    padding: 14px 40px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    background: linear-gradient(135deg, #0B3C5D, #1D70A2);
+    color: #fff;
+}
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:30px auto;
+}
+
+.hero-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:220px;
+    height:55px;
+    background:linear-gradient(135deg,#0B3C5D,#1D70A2);
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
 .about{
   background: linear-gradient(135deg, #0A192F, #0B3C5D, #1D70A2);
   color: var(--white);
@@ -425,11 +505,30 @@ section {
     right: 0;
     width: 100%;
   }
+ @media (max-width:768px){
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.hero-btn{
+
+    width:90%;
+
+}
+
+}
+
+}
 
   .navbar.open {
     display: flex;
   }
-}
+
 
 /* 🔥 PREMIUM UI UPGRADE 
 
